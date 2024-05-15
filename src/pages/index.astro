@@ -1,4 +1,6 @@
 ---
+import navigate from '../components'
+import '../styles/global.css'
 const siteName = "Kaidence's Digital Garden"
 ---
 
@@ -15,7 +17,11 @@ const siteName = "Kaidence's Digital Garden"
 		       <nav> 
         <a href="/"></a>
         <a href="about">About</a>
-        <a href=""></a>
+        <a href="portfolio">portfolio</a>
 		</nav>
+		<p>about me</p>
+{skills.map((skill) => 
+<li>{skill}</li>
+)}
 	</body>
 </html>
