@@ -1,0 +1,18 @@
+---
+const emojiHolidays =  [ "☘️", "🐰", "🎆",  "🎃", "🎄" ];
+---
+<html lang="en">
+    <head>
+    <style>
+        h1{
+            font-size: 1 rem;
+        }
+    </style>
+</head>
+<body>
+
+    {
+        emojiHolidays.map(emoji => <h1>{emoji.emoji}</h1>)
+    }
+</body>
+</html>
