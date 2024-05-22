@@ -1,10 +1,10 @@
 ---
-import Navigation from '../components/Navigation.astro';
-import "../styles/global.css";
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-const siteName = "Kaidence's Digital Garden"
+import BaseLayout from '../layouts/baseLayout.astro';
+const pageTitle = "Home Page";
 ---
+<BaseLayout pageTitle={pageTitle}>
+  <h2>My awesome blog subtitle</h2>
+</BaseLayout>
 
 <html lang="en">
 	<head>
@@ -16,17 +16,24 @@ const siteName = "Kaidence's Digital Garden"
 	</head>
 	<body>
 		<h1>Kaidence's Digital Garden</h1>
-		<Navigation />
+		<navigation />
         <a href="/"></a>
         <a href="about">About</a>
         <a href="portfolio">portfolio</a>
 		<a href="/blog/">Blog</a>
-		<Navigation />
+		<navigation />
 		<p>about me</p>
 {skills.map((skill) => 
 <li>{skill}</li>
 )}
- <Header />
-    <Footer />
+ <header />
+    <footer />
+	<script>
+		document.querySelector('.hamburger').addEventListener('click', () => {
+		  document.querySelector('.nav-links').classList.toggle('expanded');
+		});
+
+		import "../scripts/menu.js";
+	  </script>
 </body>
 </html>
